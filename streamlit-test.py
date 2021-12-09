@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-# import torch
+import torch
 import os
 import imageio
 import base64
@@ -32,8 +32,8 @@ def visualize_resions(img_path, box_list, clipscore_list):
 
 if __name__ == '__main__':
     st.title("Demo")
-#     device = "cuda" if torch.cuda.is_available() else "cpu"
-    device='cpu'
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+#     device='cpu'
     clip_model =  "ViT-B/32"
     cg = CLIPBeamGrounding(clip_model, device, alpha=0.2)
 
