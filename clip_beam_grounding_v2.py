@@ -7,9 +7,9 @@ from PIL import Image
 
 import clip
 
-import sys
-sys.path.append('../code/phraseloceval/lib/')
-from phraseloc.eval.dataset import Dataset, DatasetLoader
+# import sys
+# sys.path.append('../code/phraseloceval/lib/')
+# from phraseloc.eval.dataset import Dataset, DatasetLoader
 
 
 # ========= box searching strategy =======
@@ -209,60 +209,60 @@ class CLIPBeamGrounding(object):
 
 
 #***************************************************
-def quanti_eval(cbg, json_path, coco_path):     #定量评测函数，陆明聪，11.30 15：13
-    loader=DatasetLoader()
-    dataset=loader.read_json(json_path)
-    img_path=dataset.imagename
-    final_img_path=[coco_path+path for path in img_path]
-    query=dataset.get_phraselist()
-    # print(final_img_path[:20])
-    # print(query[:20])
-    # print(len(query))
-    # print(len(final_img_path))
-    beam_pred=[]
-    # s=time.time()
-    for i,qu in enumerate(query):
-        print(i,'/',len(query))
-        img_p=final_img_path[i]
-        qu_text=' '.join(qu)
-        history, clip_scores = cbg.search(img_p, qu_text, beam_size=3, patience=2, max_steps=20, threshold=0.5)
-        final_box=history[-1]       #此处得到的box表示为[x1,y1,x2,y2]
-        comparable_box=final_box.copy()
-        comparable_box[2]=comparable_box[2]-comparable_box[0]
-        comparable_box[3]=comparable_box[3]-comparable_box[1]
-        #表示为[x1,y1,w,h]
-        t=comparable_box.tolist()
-        beam_pred.append({"box":t, "image":"", "entity":"", "phraseId":"", 
-        "imageName":"", "phrase":[], "categories":[]})
-        if i<1000:
-            # print(img_p)
-            # print(qu_text)
-            # print(history)
-            pass
-        else:
-            # print(type(comparable_box))
-            # print(beam_pred)
-            break
-    with open('beam_pred_v2_refcoco+_1000_a2b3p2t.5.json','w', encoding='utf-8') as f:
-        json.dump(beam_pred,f)
-        print('finish')
-    # e=time.time()
-    # print(e-s)
+# def quanti_eval(cbg, json_path, coco_path):     #定量评测函数，陆明聪，11.30 15：13
+#     loader=DatasetLoader()
+#     dataset=loader.read_json(json_path)
+#     img_path=dataset.imagename
+#     final_img_path=[coco_path+path for path in img_path]
+#     query=dataset.get_phraselist()
+#     # print(final_img_path[:20])
+#     # print(query[:20])
+#     # print(len(query))
+#     # print(len(final_img_path))
+#     beam_pred=[]
+#     # s=time.time()
+#     for i,qu in enumerate(query):
+#         print(i,'/',len(query))
+#         img_p=final_img_path[i]
+#         qu_text=' '.join(qu)
+#         history, clip_scores = cbg.search(img_p, qu_text, beam_size=3, patience=2, max_steps=20, threshold=0.5)
+#         final_box=history[-1]       #此处得到的box表示为[x1,y1,x2,y2]
+#         comparable_box=final_box.copy()
+#         comparable_box[2]=comparable_box[2]-comparable_box[0]
+#         comparable_box[3]=comparable_box[3]-comparable_box[1]
+#         #表示为[x1,y1,w,h]
+#         t=comparable_box.tolist()
+#         beam_pred.append({"box":t, "image":"", "entity":"", "phraseId":"", 
+#         "imageName":"", "phrase":[], "categories":[]})
+#         if i<1000:
+#             # print(img_p)
+#             # print(qu_text)
+#             # print(history)
+#             pass
+#         else:
+#             # print(type(comparable_box))
+#             # print(beam_pred)
+#             break
+#     with open('beam_pred_v2_refcoco+_1000_a2b3p2t.5.json','w', encoding='utf-8') as f:
+#         json.dump(beam_pred,f)
+#         print('finish')
+#     # e=time.time()
+#     # print(e-s)
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
 
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    # clip_model = "RN50"
-    clip_model = "ViT-B/32"
-    cbg = CLIPBeamGrounding(clip_model, device)
+#     device = "cuda" if torch.cuda.is_available() else "cpu"
+#     # clip_model = "RN50"
+#     clip_model = "ViT-B/32"
+#     cbg = CLIPBeamGrounding(clip_model, device)
 
 
-    refcoco_path='../code/phraseloceval/data/refcoco/annotation_test.json'
-    refcoco_plus_path='../code/phraseloceval/data/refcoco+/annotation_test.json'
-    refcocog_path='../code/phraseloceval/data/refcocog/annotation_test.json'
-    cocoimg_path='../../../mnt/ssd_01/data_base/MS_COCO/coco/images/train2014/'
-    quanti_eval(cbg,refcoco_plus_path,cocoimg_path)
+#     refcoco_path='../code/phraseloceval/data/refcoco/annotation_test.json'
+#     refcoco_plus_path='../code/phraseloceval/data/refcoco+/annotation_test.json'
+#     refcocog_path='../code/phraseloceval/data/refcocog/annotation_test.json'
+#     cocoimg_path='../../../mnt/ssd_01/data_base/MS_COCO/coco/images/train2014/'
+#     quanti_eval(cbg,refcoco_plus_path,cocoimg_path)
 
     # pic_path = '/data/kebobei/1128/tmp/man-dog-sea.jpg'
     # pic_path = '/data/kebobei/1128/tmp/418.jpg'
