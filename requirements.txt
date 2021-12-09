@@ -1,4 +1,164 @@
+absl-py==0.13.0
+aiocontextvars==0.2.2
+aiohttp==3.7.4.post0
+altair==4.1.0
+argon2-cffi==20.1.0
+astor==0.8.1
+async-generator==1.10
+async-timeout==3.0.1
+attrs==21.2.0
+backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work
+backports.zoneinfo==0.2.1
+base58==2.1.0
+bleach==4.1.0
+blinker==1.4
+boto3==1.20.18
+botocore==1.23.18
+cached-property==1.5.2
+cachetools==4.2.2
+certifi==2021.5.30
+cffi @ file:///tmp/build/80754af9/cffi_1625814693874/work
+chardet==4.0.0
+charset-normalizer==2.0.4
+click @ file:///tmp/build/80754af9/click_1621604852318/work
+clip @ git+https://github.com/openai/CLIP.git@573315e83f07b53a61ff5098757e8fc885f1703e
+contextvars==2.4
+cycler==0.10.0
+dataclasses @ file:///tmp/build/80754af9/dataclasses_1614363715916/work
+decorator @ file:///tmp/build/80754af9/decorator_1621259047763/work
+defusedxml==0.7.1
+docopt==0.6.2
+entrypoints==0.3
+faiss==1.7.0
+FastNLP==0.7.0
+filelock==3.4.0
+Flask @ file:///home/ktietz/src/ci/flask_1611932660458/work
+fsspec==2021.7.0
+ftfy==6.0.3
+future==0.18.2
+gevent @ file:///tmp/build/80754af9/gevent_1628273678295/work
+gitdb==4.0.7
+GitPython==3.1.20
+google-auth==1.35.0
+google-auth-oauthlib==0.4.5
+greenlet @ file:///tmp/build/80754af9/greenlet_1628879730431/work
+grpcio==1.39.0
+h5py==3.1.0
+huggingface-hub==0.2.0
+idna==3.2
+idna-ssl==1.1.0
+imageio==2.9.0
+immutables==0.16
+importlib-metadata==4.6.4
+importlib-resources==5.2.2
+ipykernel==5.5.3
+ipython @ file:///tmp/build/80754af9/ipython_1593447367857/work
+ipython-genutils @ file:///tmp/build/80754af9/ipython_genutils_1606773439826/work
+ipywidgets==7.6.3
+itsdangerous @ file:///tmp/build/80754af9/itsdangerous_1621432558163/work
+jedi==0.18.0
+Jinja2 @ file:///tmp/build/80754af9/jinja2_1624781299557/work
+jmespath==0.10.0
+joblib==1.0.1
+jsonschema==3.2.0
+jupyter==1.0.0
+jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1616770841739/work
+jupyter-console==6.4.0
+jupyter-core @ file:///tmp/build/80754af9/jupyter_core_1612213308682/work
+jupyterlab-pygments==0.1.2
+jupyterlab-widgets==1.0.0
+kiwisolver==1.3.1
+loguru==0.5.3
+Markdown==3.3.4
+MarkupSafe @ file:///tmp/build/80754af9/markupsafe_1621528150516/work
+matplotlib==3.3.4
+mistune==0.8.4
+mkl-fft==1.3.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+multidict==5.1.0
+nbclient==0.5.4
+nbconvert==6.0.7
+nbformat==5.1.3
+nest-asyncio==1.5.1
+nltk==3.6.5
+notebook==6.4.3
+numpy @ file:///tmp/build/80754af9/numpy_and_numpy_base_1603487797006/work
+oauthlib==3.1.1
+olefile==0.46
+opencv-contrib-python==4.5.1.48
+packaging==21.0
+pandas==1.1.5
+pandocfilters==1.4.3
+parso @ file:///tmp/build/80754af9/parso_1617223946239/work
+pexpect @ file:///tmp/build/80754af9/pexpect_1605563209008/work
+pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
+Pillow @ file:///tmp/build/80754af9/pillow_1617386154532/work
+prettytable==2.4.0
+prometheus-client==0.11.0
+prompt-toolkit==3.0.18
+protobuf==3.17.3
+ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
+pyarrow==5.0.0
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+pydeck==0.6.2
+pyDeprecate==0.3.1
+Pygments @ file:///tmp/build/80754af9/pygments_1621606182707/work
+pyparsing==2.4.7
+pyrsistent==0.18.0
+python-dateutil @ file:///home/ktietz/src/ci/python-dateutil_1611928101742/work
+pytorch-lightning==1.4.2
+pytorch-pretrained-bert==0.6.2
+pytz==2021.1
+PyYAML==5.4.1
+pyzmq==20.0.0
+qtconsole==5.1.1
+QtPy==1.10.0
+regex==2021.11.10
+requests==2.26.0
+requests-oauthlib==1.3.0
+rsa==4.7.2
+s3transfer==0.5.0
+sacremoses==0.0.46
+scikit-learn==0.24.2
+scipy==1.5.4
+Send2Trash==1.8.0
+six @ file:///tmp/build/80754af9/six_1605205335545/work
+sklearn==0.0
+smmap==4.0.0
+streamlit==0.87.0
+tensorboard==2.6.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.0
+terminado==0.11.1
+testpath==0.5.0
+threadpoolctl==2.1.0
+tokenizers==0.10.3
+toml==0.10.2
+toolz==0.11.1
 torch==1.7.1
-imageio
-clip
-matplotlib
+torch-tb-profiler==0.2.1
+torchaudio==0.7.0a0+a853dff
+torchmetrics==0.5.0
+torchvision==0.8.2
+tornado @ file:///tmp/build/80754af9/tornado_1606942266872/work
+tqdm==4.60.0
+traitlets==4.3.3
+transformers==4.12.5
+treelib==1.6.1
+typing-extensions @ file:///home/ktietz/src/ci_mi/typing_extensions_1612808209620/work
+tzlocal==3.0
+urllib3==1.26.6
+utils==1.0.1
+validators==0.18.2
+watchdog==2.1.5
+wcwidth @ file:///tmp/build/80754af9/wcwidth_1593447189090/work
+webencodings==0.5.1
+Werkzeug==2.0.1
+widgetsnbextension==3.5.1
+yarl==1.6.3
+zipp @ file:///tmp/build/80754af9/zipp_1625570634446/work
+zope.event==4.5.0
+zope.interface @ file:///tmp/build/80754af9/zope.interface_1625036152722/work
