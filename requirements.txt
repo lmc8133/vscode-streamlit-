@@ -28,7 +28,7 @@ cycler==0.10.0
 defusedxml==0.7.1
 docopt==0.6.2
 entrypoints==0.3
-faiss==1.7.0
+
 FastNLP==0.7.0
 filelock==3.4.0
 
